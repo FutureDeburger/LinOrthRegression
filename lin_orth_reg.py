@@ -81,10 +81,10 @@ if __name__ == '__main__':
     coefficients_orth_line = calculate_orth_coeffs(min_lambda, list_delta_x, list_delta_y, avg_x, avg_y)
     create_graph(points, k, b, coefficients_orth_line)
 
-    #print(f'Уравнение линейной регрессии: y = {k:.2}x + {b:.2}\nУравнение ортогональной регрессии: {coefficients_orth_line[0]:.2}x + {coefficients_orth_line[1]:.2}y + {coefficients_orth_line[2]:.2}')
     # print(f'x_ср = {avg_x}')
     # print(f'y_ср = {avg_y}')
     # print(f'Список дельта-x: {list_delta_x}')
     # print(f'Список дельта-y: {list_delta_y}')
     # print(f'Угловой коэффициент k = {k}')
     # print(f'Свободный коэффициент b = {b}')
+    # print(f'Уравнение линейной регрессии: y = {k:.2}x + {b:.2}\nУравнение ортогональной регрессии: {coefficients_orth_line[0]:.2}x + {coefficients_orth_line[1]:.2}y + {coefficients_orth_line[2]:.2}')
