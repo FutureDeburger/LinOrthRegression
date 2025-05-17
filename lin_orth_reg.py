@@ -52,7 +52,7 @@ def create_graph(list_of_points, slope_coeff, free_coefficient, orth_coefficient
     A, B, C = orth_coefficients
     orthogonal_regression_equation = (-A * x_points - C) / B if B != 0 else None
 
-    plt.figure(figsize=(8, 6))
+    plt.figure(figsize=(7, 7))
     plt.scatter(x_points, y_points, color="gray")
     plt.scatter(avg_x, avg_y, color="black")
     plt.plot(x_points, linear_regression_equation, color="blue", linewidth=2, label=f"Линейная регрессия")
