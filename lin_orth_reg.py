@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-def calculate_average_x(list_points, p):
+def calculate_average_coordinate(list_points, p):
     list_of_points = list(sum(j for j in i[:1]) for i in list_points) if p == 'x' else list(sum(j for j in i[1:]) for i in list_points)
     return sum(list_of_points) / len(list_of_points)
 
@@ -67,12 +67,12 @@ def create_graph(list_of_points, slope_coeff, free_coefficient, orth_coefficient
 
 if __name__ == '__main__':
 
-    points = [[1, 4], [3, 1], [1, 2], [16, 1], [14, 4], [18, 12], [15, 9], [1, 9], [1, 4], [5, 3]]
+    points = [[11, 4], [3, 1], [1, 2], [16, 1], [14, 4], [18, 12], [15, 9], [1, 9], [1, 4], [5, 3]]
     #points = [[1, 2], [2, 3], [3, 4], [4, 5], [2, 4], [3, 2], [4, 6], [5, 3]]
     #points = [[1, 10], [1, 12], [1, 8], [5, 5], [6, 6], [7, 7]]
 
-    avg_x = calculate_average_x(points, 'x')
-    avg_y = calculate_average_x(points, 'y')
+    avg_x = calculate_average_coordinate(points, 'x')
+    avg_y = calculate_average_coordinate(points, 'y')
     list_delta_x = calculate_delta_point(points, avg_x, 'x')
     list_delta_y = calculate_delta_point(points, avg_y, 'y')
     k = calculate_slope_coefficient(list_delta_x, list_delta_y)
